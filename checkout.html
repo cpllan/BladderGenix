@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | BladderGenix</title>
+    <link rel="stylesheet" href="checkout.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Promotion Banner -->
+    <div class="promo-banner">
+        <div class="promo-container">
+            <img src="assets/imgPromoLogo.svg" alt="Revival Point Logo" class="promo-logo">
+            <div class="secure-info">
+                <img src="http://localhost:3845/assets/f06621542755e2a7db7fe318a0ae8f172c8d7cf3.svg" alt="Lock" class="secure-icon">
+                <span class="secure-text">SECURE</span>
+                <span class="secure-desc">| You Are On A 256-Bit Secure Order Page</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Checkout Area -->
+    <main class="checkout-main">
+        
+        <!-- Step Indicators -->
+        <div class="steps-container">
+            <div class="step-item active" id="indicator-1">
+                <div class="step-icon">1</div>
+                <p>Contact Information</p>
+            </div>
+            <div class="step-line"></div>
+            <div class="step-item" id="indicator-2">
+                <div class="step-icon">2</div>
+                <p>Shipping Information</p>
+            </div>
+            <div class="step-line"></div>
+            <div class="step-item" id="indicator-3">
+                <div class="step-icon">3</div>
+                <p>Complete Order</p>
+            </div>
+        </div>
+
+        <h1 class="checkout-heading">You're 3 Steps Away From Improving Yourself...</h1>
+
+        <div class="checkout-content">
+            
+            <!-- FORM SECTION -->
+            <div class="form-section">
+                <!-- STEP 1: Contact Info -->
+                <div id="step-1" class="checkout-step active">
+                    <h2>Enter Your Contact Information</h2>
+                    <div class="input-group">
+                        <label>E-mail address</label>
+                        <input type="email" placeholder="E-mail address">
+                    </div>
+                    <div class="input-group">
+                        <label>First Name</label>
+                        <input type="text" placeholder="First Name">
+                    </div>
+                    <div class="input-group">
+                        <label>Last Name</label>
+                        <input type="text" placeholder="Last Name">
+                    </div>
+                    <button class="next-btn" onclick="goToStep(2)">Next Step <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.75 9H14.25" stroke="#003327" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 3.75L14.25 9L9 14.25" stroke="#003327" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                </div>
+
+                <!-- STEP 2: Shipping Info -->
+                <div id="step-2" class="checkout-step">
+                    <h2>Enter Your Billing Information</h2>
+                    <div class="input-group">
+                        <label>First Name</label>
+                        <input type="text" placeholder="First Name">
+                    </div>
+                    <div class="input-group">
+                        <label>Last Name</label>
+                        <input type="text" placeholder="Last Name">
+                    </div>
+                    <div class="input-group">
+                        <label>Phone Number</label>
+                        <input type="tel" placeholder="Phone Number">
+                    </div>
+                    
+                    <h3 class="subsection-label">Address Information</h3>
+                    <div class="input-group">
+                        <label>Address</label>
+                        <input type="text" placeholder="Address">
+                    </div>
+                    <div class="input-group">
+                        <label>Apartment, Suite, etc</label>
+                        <input type="text" placeholder="Apartment, Suite, etc">
+                    </div>
+                    
+                    <div class="input-row">
+                        <div class="input-group half">
+                            <label>Country</label>
+                            <select><option>United States</option></select>
+                        </div>
+                        <div class="input-group half">
+                            <label>State</label>
+                            <select><option>State</option></select>
+                        </div>
+                    </div>
+                    
+                    <div class="input-row">
+                        <div class="input-group half">
+                            <label>City</label>
+                            <input type="text" placeholder="City">
+                        </div>
+                        <div class="input-group half">
+                            <label>Zip Code</label>
+                            <input type="text" placeholder="Zip Code">
+                        </div>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="same-shipping">
+                        <label for="same-shipping">Shipping address same as billing?</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="text-alerts">
+                        <label for="text-alerts">Join Revival Point text alerts to get the latest discounts, order updates, and special offers**</label>
+                    </div>
+                    <p class="text-alert-disclaimer">**By checking this box, you agree to receive recurring automated marketing text messages (e.g. AI content, cart reminders) from Revival Point LLC at the number you provide. Consent not a condition of purchase. We may share info with service providers per our Privacy Policy. Reply HELP for help & STOP to cancel. Msg frequency varies. Msg & data rates may apply. By checking this box, you also agree to our <a href="#">Terms (incl. arbitration)</a> & <a href="#">Privacy Policy</a>.</p>
+
+                    <button class="next-btn" onclick="goToStep(3)">Next Step <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.75 9H14.25" stroke="#003327" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 3.75L14.25 9L9 14.25" stroke="#003327" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                    <button class="back-btn" onclick="goToStep(1)">Back to Contact Info</button>
+                </div>
+
+                <!-- STEP 3: Complete Order -->
+                <div id="step-3" class="checkout-step">
+                    <h2>Confirm Your Payment Info</h2>
+                    
+                    <div class="payment-container">
+                        <div class="secure-server-box">
+                            <p>Your order will be processed on our 256-bit secure server</p>
+                            <img src="http://localhost:3845/assets/f06621542755e2a7db7fe318a0ae8f172c8d7cf3.svg" alt="Lock">
+                        </div>
+                        
+                        <div class="payment-fields">
+                            <div class="input-group">
+                                <div class="card-input-wrapper">
+                                    <img src="http://localhost:3845/assets/1bd05c04647c78b5b95fd5dcf714a1b9882b9673.svg" alt="Card" class="card-icon">
+                                    <input type="text" placeholder="0020 0230 0403 0459">
+                                </div>
+                            </div>
+                            
+                            <div class="input-row">
+                                <div class="input-group half">
+                                    <select><option>Exp Month</option></select>
+                                </div>
+                                <div class="input-group half">
+                                    <select><option>Exp Year</option></select>
+                                </div>
+                            </div>
+                            
+                            <div class="input-row align-center">
+                                <div class="input-group half">
+                                    <input type="text" placeholder="CVV">
+                                </div>
+                                <a href="#" class="cvv-link">What Is CVV?</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="next-btn submit-btn" onclick="submitOrder()">Next Step <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.75 9H14.25" stroke="#003327" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 3.75L14.25 9L9 14.25" stroke="#003327" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                    <button class="back-btn" onclick="goToStep(2)">Back to Shipping Info</button>
+                </div>
+
+                <!-- Trust Badges Under Form -->
+                <div class="form-trust-badges">
+                    <img src="http://localhost:3845/assets/d9760ce551dfa64050df7791ba55d33e7dc25351.png" alt="BBB A+ Rating" class="badge">
+                    <img src="http://localhost:3845/assets/12184339be6e22292ce6a9869407be964c141c83.png" alt="Trust Badge" class="badge">
+                    <img src="http://localhost:3845/assets/842ae652773180469ff4666f180c32cf522830b8.svg" alt="Secure" class="badge">
+                    <img src="http://localhost:3845/assets/4365ee0dfe605dc4a640d4ae070b5cc005ed9d5f.svg" alt="Norton" class="badge">
+                </div>
+            </div>
+
+            <!-- Guarantee Box -->
+            <div class="guarantee-box">
+                <img src="http://localhost:3845/assets/f7f1910d8dc10a79236ae1559c705ecdc7699d17.svg" alt="90 Day Guarantee" class="guarantee-seal">
+                <div class="guarantee-text">
+                    <h3>Your Purchase Today is Fully Protected By <strong>Our 90-Day Money Back Guarantee</strong></h3>
+                    <p>We want to make 100% sure that you love BladderGenix, which is why you get to try it completely risk free for three full months and make sure you love it. Any time you want, you can contact support to request a refund, no questions asked!</p>
+                </div>
+            </div>
+
+            <!-- Buyer Protection Details -->
+            <div class="buyer-protection">
+                <h2>BladderGenix Buyer Protection</h2>
+                <div class="protection-grid">
+                    <div class="protection-item">
+                        <img src="http://localhost:3845/assets/d673e942311d44b7e606d310830d875a41848fa3.svg" alt="Fast Shipping">
+                        <div>
+                            <h4>Fast Shipping:</h4>
+                            <p>3-Day DHL for USA, 8-Day Worldwide</p>
+                        </div>
+                    </div>
+                    <div class="protection-item">
+                        <img src="http://localhost:3845/assets/9ba08f15e0f2be8cba0d7c8c060fb500f68e7484.svg" alt="Privacy">
+                        <div>
+                            <h4>Privacy Guaranteed</h4>
+                            <p>Your information is safe and is never shared</p>
+                        </div>
+                    </div>
+                    <div class="protection-item">
+                        <img src="http://localhost:3845/assets/88a75700d6ce43f7dd3bc3ce471fa26df626c2d4.svg" alt="Live Help">
+                        <div>
+                            <h4>7 Days/Week Live Phone Help</h4>
+                            <p>Talk to a real, live customer specialist 9am-8pm ET</p>
+                        </div>
+                    </div>
+                    <div class="protection-item">
+                        <img src="http://localhost:3845/assets/10f08a7b9e454b6e7f86d092a945609145147f98.svg" alt="Lowest Price">
+                        <div>
+                            <h4>Lowest Price Guaranteed</h4>
+                            <p>You will never see this at a lower price, guaranteed.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="checkout-footer">
+        <img src="http://localhost:3845/assets/4dcbc0fe1bc2751aae0aad8b3817c5fc13991df3.svg" alt="Revival Point" class="footer-logo">
+        <p>Copyright 2024 | Revival Point™</p>
+    </footer>
+
+    <script src="checkout.js"></script>
+</body>
+</html>

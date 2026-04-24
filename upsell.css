@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #eef6f5;
+    color: #003327;
+}
+
+/* ---------------- UPSELL MAIN ---------------- */
+.upsell-main {
+    background-color: #eef6f5;
+    padding: 70px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: calc(100vh - 136px); /* Accounting for footer height roughly */
+}
+
+.upsell-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    color: #003327;
+    font-size: 52px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* ---------------- COUPON CARD ---------------- */
+.coupon-wrapper {
+    position: relative;
+    width: 907px;
+    max-width: 100%;
+    margin-bottom: 50px;
+}
+
+.coupon-shadow {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0fc7a3;
+    border-radius: 20px;
+    transform: rotate(1.89deg);
+    z-index: 1;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.coupon-wrapper:hover .coupon-shadow {
+    transform: rotate(-1.89deg);
+}
+
+.coupon-card-wrapper {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    filter: drop-shadow(0 0 1px rgba(0,0,0,0.25)) drop-shadow(0 4px 10px rgba(0,0,0,0.05));
+}
+
+.coupon-card {
+    width: 100%;
+    background: white;
+    border-radius: 20px;
+    -webkit-mask-image: radial-gradient(circle at 0 133px, transparent 20px, black 21px),
+                        radial-gradient(circle at 100% 133px, transparent 20px, black 21px);
+    -webkit-mask-size: 51% 100%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: left, right;
+    mask-image: radial-gradient(circle at 0 133px, transparent 20px, black 21px),
+                radial-gradient(circle at 100% 133px, transparent 20px, black 21px);
+    mask-size: 51% 100%;
+    mask-repeat: no-repeat;
+    mask-position: left, right;
+}
+
+.coupon-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 80px;
+    text-align: center;
+    justify-content: flex-start;
+}
+
+.offer-headline {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 52px;
+    color: #049d7f;
+    margin-bottom: 30px;
+    margin-top: 0;
+}
+
+.dashed-line {
+    width: 828px;
+    max-width: 100%;
+    margin-bottom: 30px;
+}
+
+.offer-details {
+    font-family: 'Inter', sans-serif;
+    font-size: 25px;
+    color: #003327;
+    max-width: 614px;
+    line-height: 1.4;
+    margin-bottom: 30px;
+}
+
+.offer-details strong {
+    font-weight: 700;
+}
+
+.offer-details em {
+    font-weight: 700;
+    font-style: italic;
+}
+
+.activate-btn {
+    background-color: #ffcc00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 12px 26px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-bottom: 25px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    color: #003327;
+}
+
+.activate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 204, 0, 0.4);
+}
+
+.recommended-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 17.5px;
+    font-weight: 300;
+    color: #003327;
+    margin-bottom: 15px;
+    line-height: 21.12px;
+}
+
+.recommended-text em {
+    font-style: italic;
+}
+
+.guarantee-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 17.5px;
+    font-weight: 300;
+    color: #003327;
+    line-height: 21.12px;
+    margin-top: 15px;
+}
+
+/* ---------------- OUTSIDE LINKS ---------------- */
+.skip-link {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    color: #219653;
+    text-decoration: underline;
+    margin-bottom: 20px;
+    display: block;
+    text-align: center;
+}
+
+.skip-note {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #686868;
+    text-align: center;
+}
+
+/* ---------------- FOOTER ---------------- */
+.upsell-footer {
+    background: #d7e1e4;
+    padding: 50px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.upsell-footer .footer-logo {
+    width: 260px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.upsell-footer p {
+    color: #2f5c51;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 960px) {
+    .coupon-wrapper {
+        width: 100%;
+        height: auto;
+    }
+    .coupon-shadow {
+        display: none; /* Hide rotated shadow on mobile for simplicity */
+    }
+    .coupon-card {
+        background: white;
+        border-radius: 20px;
+        /* Disable mask on mobile since dashed line is gone */
+        -webkit-mask-image: none;
+        mask-image: none;
+    }
+    .dashed-line {
+        display: none;
+    }
+    .upsell-title {
+        font-size: 36px;
+    }
+    .offer-headline {
+        font-size: 36px;
+    }
+    .offer-details {
+        font-size: 18px;
+    }
+    .activate-btn {
+        font-size: 20px;
+        width: 100%;
+    }
+    .upsell-main {
+        padding: 40px 20px;
+    }
+    .upsell-footer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        padding: 30px 20px;
+    }
+}
