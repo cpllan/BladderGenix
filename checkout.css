@@ -506,3 +506,25 @@ p {
 .checkout-footer p {
     color: #2f5c51;
 }
+
+/* ---------------- FORM VALIDATION ---------------- */
+.required {
+    color: #e53935;
+    font-weight: 700;
+    margin-left: 2px;
+}
+
+.input-error input,
+.input-error select {
+    border-color: #e53935 !important;
+    background-color: #fff5f5;
+    animation: shake 0.35s ease;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%       { transform: translateX(-6px); }
+    40%       { transform: translateX(6px); }
+    60%       { transform: translateX(-4px); }
+    80%       { transform: translateX(4px); }
+}

@@ -1,3 +1,38 @@
+// Form Validation
+function validateAndProceed(currentStep, nextStep) {
+    const stepEl = document.getElementById('step-' + currentStep);
+    const requiredFields = stepEl.querySelectorAll('input[required], select[required]');
+    let valid = true;
+
+    requiredFields.forEach(field => {
+        const group = field.closest('.input-group');
+        if (group) group.classList.remove('input-error');
+
+        const isEmpty = field.tagName === 'SELECT'
+            ? field.value === ''
+            : field.value.trim() === '';
+
+        if (isEmpty) {
+            if (group) {
+                group.classList.add('input-error');
+                void group.offsetWidth; // Re-trigger shake animation
+            }
+            valid = false;
+        }
+    });
+
+    if (valid) {
+        if (nextStep) {
+            goToStep(nextStep);
+        } else {
+            submitOrder();
+        }
+    } else {
+        const firstError = stepEl.querySelector('.input-error');
+        if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
 function goToStep(step) {
     // Hide all steps
     document.querySelectorAll('.checkout-step').forEach(el => {

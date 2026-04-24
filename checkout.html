@@ -54,40 +54,40 @@
                 <div id="step-1" class="checkout-step active">
                     <h2>Enter Your Contact Information</h2>
                     <div class="input-group">
-                        <label>E-mail address</label>
-                        <input type="email" placeholder="E-mail address">
+                        <label>E-mail address <span class="required">*</span></label>
+                        <input type="email" placeholder="E-mail address" required>
                     </div>
                     <div class="input-group">
-                        <label>First Name</label>
-                        <input type="text" placeholder="First Name">
+                        <label>First Name <span class="required">*</span></label>
+                        <input type="text" placeholder="First Name" required>
                     </div>
                     <div class="input-group">
-                        <label>Last Name</label>
-                        <input type="text" placeholder="Last Name">
+                        <label>Last Name <span class="required">*</span></label>
+                        <input type="text" placeholder="Last Name" required>
                     </div>
-                    <button class="next-btn" onclick="goToStep(2)">Next Step <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.75 9H14.25" stroke="#003327" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 3.75L14.25 9L9 14.25" stroke="#003327" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                    <button class="next-btn" onclick="validateAndProceed(1, 2)">Next Step <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.75 9H14.25" stroke="#003327" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 3.75L14.25 9L9 14.25" stroke="#003327" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
                 </div>
 
                 <!-- STEP 2: Shipping Info -->
                 <div id="step-2" class="checkout-step">
                     <h2>Enter Your Billing Information</h2>
                     <div class="input-group">
-                        <label>First Name</label>
-                        <input type="text" placeholder="First Name">
+                        <label>First Name <span class="required">*</span></label>
+                        <input type="text" placeholder="First Name" required>
                     </div>
                     <div class="input-group">
-                        <label>Last Name</label>
-                        <input type="text" placeholder="Last Name">
+                        <label>Last Name <span class="required">*</span></label>
+                        <input type="text" placeholder="Last Name" required>
                     </div>
                     <div class="input-group">
-                        <label>Phone Number</label>
-                        <input type="tel" placeholder="Phone Number">
+                        <label>Phone Number <span class="required">*</span></label>
+                        <input type="tel" inputmode="numeric" pattern="[0-9]*" placeholder="Phone Number" required>
                     </div>
                     
                     <h3 class="subsection-label">Address Information</h3>
                     <div class="input-group">
-                        <label>Address</label>
-                        <input type="text" placeholder="Address">
+                        <label>Address <span class="required">*</span></label>
+                        <input type="text" placeholder="Address" required>
                     </div>
                     <div class="input-group">
                         <label>Apartment, Suite, etc</label>
@@ -96,23 +96,29 @@
                     
                     <div class="input-row">
                         <div class="input-group half">
-                            <label>Country</label>
-                            <select><option>United States</option></select>
+                            <label>Country <span class="required">*</span></label>
+                            <select required>
+                                <option value="">Select Country</option>
+                                <option value="US" selected>United States</option>
+                            </select>
                         </div>
                         <div class="input-group half">
-                            <label>State</label>
-                            <select><option>State</option></select>
+                            <label>State <span class="required">*</span></label>
+                            <select required>
+                                <option value="">Select State</option>
+                                <option>Alabama</option><option>Alaska</option><option>Arizona</option><option>Arkansas</option><option>California</option><option>Colorado</option><option>Connecticut</option><option>Delaware</option><option>Florida</option><option>Georgia</option><option>Hawaii</option><option>Idaho</option><option>Illinois</option><option>Indiana</option><option>Iowa</option><option>Kansas</option><option>Kentucky</option><option>Louisiana</option><option>Maine</option><option>Maryland</option><option>Massachusetts</option><option>Michigan</option><option>Minnesota</option><option>Mississippi</option><option>Missouri</option><option>Montana</option><option>Nebraska</option><option>Nevada</option><option>New Hampshire</option><option>New Jersey</option><option>New Mexico</option><option>New York</option><option>North Carolina</option><option>North Dakota</option><option>Ohio</option><option>Oklahoma</option><option>Oregon</option><option>Pennsylvania</option><option>Rhode Island</option><option>South Carolina</option><option>South Dakota</option><option>Tennessee</option><option>Texas</option><option>Utah</option><option>Vermont</option><option>Virginia</option><option>Washington</option><option>West Virginia</option><option>Wisconsin</option><option>Wyoming</option>
+                            </select>
                         </div>
                     </div>
                     
                     <div class="input-row">
                         <div class="input-group half">
-                            <label>City</label>
-                            <input type="text" placeholder="City">
+                            <label>City <span class="required">*</span></label>
+                            <input type="text" placeholder="City" required>
                         </div>
                         <div class="input-group half">
-                            <label>Zip Code</label>
-                            <input type="text" placeholder="Zip Code">
+                            <label>Zip Code <span class="required">*</span></label>
+                            <input type="tel" inputmode="numeric" pattern="[0-9]*" placeholder="Zip Code" maxlength="10" required>
                         </div>
                     </div>
                     
@@ -124,9 +130,9 @@
                         <input type="checkbox" id="text-alerts">
                         <label for="text-alerts">Join Revival Point text alerts to get the latest discounts, order updates, and special offers**</label>
                     </div>
-                    <p class="text-alert-disclaimer">**By checking this box, you agree to receive recurring automated marketing text messages (e.g. AI content, cart reminders) from Revival Point LLC at the number you provide. Consent not a condition of purchase. We may share info with service providers per our Privacy Policy. Reply HELP for help & STOP to cancel. Msg frequency varies. Msg & data rates may apply. By checking this box, you also agree to our <a href="#">Terms (incl. arbitration)</a> & <a href="#">Privacy Policy</a>.</p>
+                    <p class="text-alert-disclaimer">**By checking this box, you agree to receive recurring automated marketing text messages (e.g. AI content, cart reminders) from Revival Point LLC at the number you provide. Consent not a condition of purchase. We may share info with service providers per our Privacy Policy. Reply HELP for help &amp; STOP to cancel. Msg frequency varies. Msg &amp; data rates may apply. By checking this box, you also agree to our <a href="#">Terms (incl. arbitration)</a> &amp; <a href="#">Privacy Policy</a>.</p>
 
-                    <button class="next-btn" onclick="goToStep(3)">Next Step <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.75 9H14.25" stroke="#003327" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 3.75L14.25 9L9 14.25" stroke="#003327" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                    <button class="next-btn" onclick="validateAndProceed(2, 3)">Next Step <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.75 9H14.25" stroke="#003327" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 3.75L14.25 9L9 14.25" stroke="#003327" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
                     <button class="back-btn" onclick="goToStep(1)">Back to Contact Info</button>
                 </div>
 
@@ -142,31 +148,41 @@
                         
                         <div class="payment-fields">
                             <div class="input-group">
+                                <label>Card Number <span class="required">*</span></label>
                                 <div class="card-input-wrapper">
                                     <img src="assets/imgCardIcon.svg" alt="Card" class="card-icon">
-                                    <input type="text" placeholder="0020 0230 0403 0459">
+                                    <input type="tel" inputmode="numeric" pattern="[0-9 ]*" placeholder="0020 0230 0403 0459" maxlength="19" required>
                                 </div>
                             </div>
                             
                             <div class="input-row">
                                 <div class="input-group half">
-                                    <select><option>Exp Month</option></select>
+                                    <label>Exp Month <span class="required">*</span></label>
+                                    <select required>
+                                        <option value="">Exp Month</option>
+                                        <option>01</option><option>02</option><option>03</option><option>04</option><option>05</option><option>06</option><option>07</option><option>08</option><option>09</option><option>10</option><option>11</option><option>12</option>
+                                    </select>
                                 </div>
                                 <div class="input-group half">
-                                    <select><option>Exp Year</option></select>
+                                    <label>Exp Year <span class="required">*</span></label>
+                                    <select required>
+                                        <option value="">Exp Year</option>
+                                        <option>2025</option><option>2026</option><option>2027</option><option>2028</option><option>2029</option><option>2030</option><option>2031</option><option>2032</option>
+                                    </select>
                                 </div>
                             </div>
                             
                             <div class="input-row align-center">
                                 <div class="input-group half">
-                                    <input type="text" placeholder="CVV">
+                                    <label>CVV <span class="required">*</span></label>
+                                    <input type="tel" inputmode="numeric" pattern="[0-9]*" placeholder="CVV" maxlength="4" required>
                                 </div>
                                 <a href="#" class="cvv-link">What Is CVV?</a>
                             </div>
                         </div>
                     </div>
 
-                    <button class="next-btn submit-btn" onclick="submitOrder()">Next Step <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.75 9H14.25" stroke="#003327" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 3.75L14.25 9L9 14.25" stroke="#003327" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                    <button class="next-btn submit-btn" onclick="validateAndProceed(3, null)">Next Step <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.75 9H14.25" stroke="#003327" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 3.75L14.25 9L9 14.25" stroke="#003327" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
                     <button class="back-btn" onclick="goToStep(2)">Back to Shipping Info</button>
                 </div>
 
