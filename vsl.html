@@ -54,7 +54,9 @@
         </div>
     </nav>
 
-    <!-- Mobile Menu Overlay -->
+    <!-- Mobile Navigation Overlay -->
+    <div id="mobileMenuOverlay" class="mobile-menu-overlay"></div>
+
     <div class="mobile-menu" id="mobileMenu">
         <div class="mobile-menu-header">
             <div class="logo">
@@ -570,27 +572,35 @@
         const hamburger = document.querySelector('.hamburger-menu');
         const mobileMenu = document.getElementById('mobileMenu');
         const closeBtn = document.getElementById('closeMenuBtn');
+        const menuOverlay = document.getElementById('mobileMenuOverlay');
+
+        function toggleMenu(show) {
+            if (show) {
+                mobileMenu.classList.add('active');
+                menuOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            } else {
+                mobileMenu.classList.remove('active');
+                menuOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
 
         if (hamburger) {
-            hamburger.addEventListener('click', function () {
-                mobileMenu.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            });
+            hamburger.addEventListener('click', () => toggleMenu(true));
         }
 
         if (closeBtn) {
-            closeBtn.addEventListener('click', function () {
-                mobileMenu.classList.remove('active');
-                document.body.style.overflow = '';
-            });
+            closeBtn.addEventListener('click', () => toggleMenu(false));
+        }
+
+        if (menuOverlay) {
+            menuOverlay.addEventListener('click', () => toggleMenu(false));
         }
 
         // Close menu when clicking on a link
         document.querySelectorAll('.mobile-nav-links .nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                document.body.style.overflow = '';
-            });
+            link.addEventListener('click', () => toggleMenu(false));
         });
 
         // Video play button
