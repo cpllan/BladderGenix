@@ -209,43 +209,84 @@ body {
 
 /* ---------------- RESPONSIVE ---------------- */
 @media (max-width: 960px) {
+    .upsell-main {
+        padding: 40px 16px;
+    }
+
+    .upsell-title {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
     .coupon-wrapper {
         width: 100%;
-        height: auto;
+        margin-bottom: 40px;
     }
+
     .coupon-shadow {
-        display: none; /* Hide rotated shadow on mobile for simplicity */
+        display: block; /* Restore tilted background */
+        transform: rotate(1.5deg);
+        border-radius: 16px;
     }
+
     .coupon-card {
-        background: white;
-        border-radius: 20px;
-        /* Disable mask on mobile since dashed line is gone */
-        -webkit-mask-image: none;
-        mask-image: none;
+        border-radius: 16px;
+        /* Restore the side cutouts */
+        -webkit-mask-image: radial-gradient(circle at 0 100px, transparent 15px, black 16px),
+                            radial-gradient(circle at 100% 100px, transparent 15px, black 16px);
+        mask-image: radial-gradient(circle at 0 100px, transparent 15px, black 16px),
+                    radial-gradient(circle at 100% 100px, transparent 15px, black 16px);
     }
-    .dashed-line {
-        display: none;
+
+    .coupon-content {
+        padding: 30px; /* Requested 30px only padding */
     }
-    .upsell-title {
-        font-size: 36px;
-    }
+
     .offer-headline {
-        font-size: 36px;
+        font-size: 30px;
+        margin-bottom: 15px; /* Decreased spacing */
     }
+
+    .dashed-line {
+        display: block; /* Restore dashed line */
+        margin-bottom: 20px;
+    }
+
     .offer-details {
-        font-size: 18px;
+        font-size: 17px;
+        margin-bottom: 20px; /* Decreased spacing */
+        line-height: 1.4;
     }
+
     .activate-btn {
         font-size: 20px;
         width: 100%;
+        padding: 15px 20px;
+        margin-bottom: 20px;
     }
-    .upsell-main {
-        padding: 40px 20px;
+
+    .recommended-text {
+        font-size: 15px;
+        margin-bottom: 10px;
     }
+
+    .guarantee-text {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .skip-link {
+        font-size: 18px;
+    }
+
     .upsell-footer {
         flex-direction: column;
         gap: 20px;
         text-align: center;
         padding: 30px 20px;
+    }
+
+    .upsell-footer .footer-logo {
+        width: 200px;
     }
 }

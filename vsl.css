@@ -6,14 +6,18 @@
     font-family: 'Inter', sans-serif;
 }
 
-.vsl-main p, .vsl-main h1, .vsl-main h2, .vsl-main h3 {
+.vsl-main p,
+.vsl-main h1,
+.vsl-main h2,
+.vsl-main h3 {
     margin: 0;
     padding: 0;
 }
 
 /* Global Container */
 .vsl-main .container {
-    max-width: 1440px; /* Full Figma frame width */
+    max-width: 1440px;
+    /* Full Figma frame width */
     margin: 0 auto;
     position: relative;
 }
@@ -54,7 +58,6 @@
     font-weight: 500;
     color: #003327;
     line-height: 1.2;
-    white-space: pre-wrap;
 }
 
 .vsl-headline .highlight {
@@ -68,7 +71,7 @@
     position: relative;
     border-radius: 20px;
     background: #f3fafa;
-    box-shadow: 0 0 40px rgba(0,0,0,0.05);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
     overflow: hidden;
 }
 
@@ -132,7 +135,8 @@
     color: #003327;
 }
 
-.play-text span, .play-text strong {
+.play-text span,
+.play-text strong {
     display: block;
     font-size: 32px;
     font-weight: 700;
@@ -166,7 +170,7 @@
     top: -0.13%;
     object-fit: cover;
     max-width: none;
-    filter: drop-shadow(0 -12px 24px rgba(0,0,0,0.25));
+    filter: drop-shadow(0 -12px 24px rgba(0, 0, 0, 0.25));
 }
 
 /* ---------------- DOCTOR SECTION ---------------- */
@@ -256,10 +260,26 @@
     object-fit: contain;
 }
 
-.logo-flex img:nth-child(1) { width: 132px; height: 55px; }
-.logo-flex img:nth-child(2) { width: 189px; height: 34px; mix-blend-mode: multiply; }
-.logo-flex img:nth-child(3) { width: 128px; height: 58.88px; }
-.logo-flex img:nth-child(4) { width: 78px; height: 70px; }
+.logo-flex img:nth-child(1) {
+    width: 132px;
+    height: 55px;
+}
+
+.logo-flex img:nth-child(2) {
+    width: 189px;
+    height: 34px;
+    mix-blend-mode: multiply;
+}
+
+.logo-flex img:nth-child(3) {
+    width: 128px;
+    height: 58.88px;
+}
+
+.logo-flex img:nth-child(4) {
+    width: 78px;
+    height: 70px;
+}
 
 /* References */
 .scientific-references {
@@ -316,6 +336,7 @@
 
 .vsl-card {
     background: #f0f4f4;
+    /* Correct light green background from Figma */
     border-radius: 20px;
     position: relative;
     display: flex;
@@ -332,7 +353,10 @@
 }
 
 .vsl-card.featured {
-    margin-top: -53px; /* To stick out on top */
+    background: #ffffff !important;
+    /* White background for 6 bottles */
+    margin-top: -53px;
+    /* To stick out on top */
 }
 
 .card-featured-header {
@@ -349,20 +373,30 @@
 
 .qty-badge {
     position: absolute;
-    top: -23px;
-    right: 23px;
     width: 46px;
     height: 46px;
-    background-image: url('http://localhost:3845/assets/4c193d11cee0234172cbc18daa8ebab3258c45a5.svg');
     background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 26px;
     font-weight: 600;
+    z-index: 10;
 }
-.vsl-card.featured .qty-badge { color: #22757c; top: 5px; right: 3px; }
-.vsl-card:not(.featured) .qty-badge { color: white; background-image: url('http://localhost:3845/assets/7e490fcd2e05450f8e02c77a2908179056926f02.svg'); top: 10px; right: 10px; }
+
+.vsl-card.featured .qty-badge {
+    color: #22757c;
+    background-image: url('assets/imgBadgeWhite.svg');
+    top: 5px;
+    right: 4px;
+}
+
+.vsl-card:not(.featured) .qty-badge {
+    color: white;
+    background-image: url('assets/imgBadgeGreen.svg');
+    top: 1px;
+    right: 4px;
+}
 
 .card-content {
     padding: 23px 17px;
@@ -419,11 +453,37 @@
     margin-top: 13px;
 }
 
-.price-main .currency { font-size: 30px; font-weight: 900; color: #055960; margin-top: 2px; }
-.price-main .amount { font-size: 70px; font-weight: 700; color: #055960; line-height: 1; }
-.price-details { display: flex; flex-direction: column; margin-left: 2px; }
-.price-details .cents { font-size: 30px; font-weight: 900; color: #055960; }
-.price-details .per { font-size: 22px; font-weight: 600; color: #055960; }
+.price-main .currency {
+    font-size: 30px;
+    font-weight: 900;
+    color: #055960;
+    margin-top: 2px;
+}
+
+.price-main .amount {
+    font-size: 70px;
+    font-weight: 700;
+    color: #055960;
+    line-height: 1;
+}
+
+.price-details {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2px;
+}
+
+.price-details .cents {
+    font-size: 30px;
+    font-weight: 900;
+    color: #055960;
+}
+
+.price-details .per {
+    font-size: 22px;
+    font-weight: 600;
+    color: #055960;
+}
 
 .save-badge-star {
     position: absolute;
@@ -431,7 +491,7 @@
     right: -10px;
     width: 66px;
     height: 66px;
-    background-image: url('http://localhost:3845/assets/4ffdb859d0256ec35293e5667f79d8d0c9d28c19.svg');
+    background-image: url('assets/imgBlueStar.svg');
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -442,6 +502,7 @@
     font-weight: 700;
     line-height: 1.1;
 }
+
 .card-benefits {
     background: white;
     border-radius: 10px;
@@ -510,7 +571,8 @@
 .vsl-buy-btn .icon-box {
     position: absolute;
     right: -15px;
-    background: url('http://localhost:3845/assets/a98436ebcad1d553ea82440384b95c89c5af7cd8.svg') no-repeat center;
+    background: url('assets/imgButtonBadgeFinal.svg') no-repeat center;
+    background-size: contain;
     width: 60px;
     height: 62.75px;
 }
@@ -543,9 +605,22 @@
     gap: 15px;
 }
 
-.card-footer-price span:nth-child(1) { font-size: 18px; color: #000; }
-.card-footer-price span:nth-child(2) { font-size: 18px; color: #000; text-decoration: line-through; }
-.card-footer-price span:nth-child(3) { font-size: 18px; font-weight: 700; color: #000; }
+.card-footer-price span:nth-child(1) {
+    font-size: 18px;
+    color: #000;
+}
+
+.card-footer-price span:nth-child(2) {
+    font-size: 18px;
+    color: #000;
+    text-decoration: line-through;
+}
+
+.card-footer-price span:nth-child(3) {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+}
 
 /* ---------------- FREE GIFT BANNER ---------------- */
 .free-gift-banner {
@@ -596,7 +671,7 @@
     right: -10px;
     width: 140px;
     height: 140px;
-    background-image: url('http://localhost:3845/assets/4ffdb859d0256ec35293e5667f79d8d0c9d28c19.svg');
+    background-image: url('assets/imgBlueStar.svg');
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -605,8 +680,16 @@
     color: white;
 }
 
-.gift-badge span:first-child { font-size: 38px; font-weight: 700; }
-.gift-badge span:last-child { font-size: 16px; font-weight: 600; text-transform: uppercase; }
+.gift-badge span:first-child {
+    font-size: 38px;
+    font-weight: 700;
+}
+
+.gift-badge span:last-child {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
 
 /* ---------------- GUARANTEE SECTION ---------------- */
 .vsl-guarantee {
@@ -705,7 +788,8 @@
     gap: 32px;
 }
 
-.footer-links a, .footer-copyright {
+.footer-links a,
+.footer-copyright {
     font-size: 16px;
     color: #2f5c51;
     text-decoration: none;
@@ -737,4 +821,472 @@
     width: 22px;
     height: 22px;
     object-fit: contain;
+}
+
+/* ---------------- MOBILE RESPONSIVE ---------------- */
+@media (max-width: 768px) {
+
+    /* 1. Full width the heading section */
+    .vsl-hero {
+        padding: 40px 20px;
+    }
+
+    .vsl-headline {
+        font-size: 32px;
+        white-space: normal;
+    }
+
+    .vsl-eyebrow {
+        font-size: 18px !important;
+    }
+
+    /* 2. Make the placeholder video section fit the container */
+    .vsl-video-container {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 559 / 674;
+        max-width: 559px;
+    }
+
+    .vsl-woman {
+        width: 100%;
+        height: 52%;
+        position: absolute;
+    }
+
+    .vsl-leak-visual {
+        width: 100%;
+        height: 48%;
+        position: absolute;
+        top: 52%;
+    }
+
+    .vsl-play-btn {
+        width: 80%;
+        height: auto;
+        left: 10%;
+        top: 40%;
+    }
+
+    .vsl-play-inner {
+        padding: 10px;
+        gap: 8px;
+        height: auto;
+    }
+
+    .play-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .play-text span,
+    .play-text strong {
+        font-size: 20px;
+    }
+
+    .vsl-doctor-badge {
+        width: 120px;
+        height: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        top: auto;
+        bottom: 10px;
+    }
+
+    .vsl-doctor-badge-inner {
+        width: 100%;
+        height: 150px;
+    }
+
+    /* 3. Stack the doctor section */
+    .vsl-doctor-section .vsl-content-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 0 20px;
+        gap: 20px;
+    }
+
+    .vsl-doctor-info {
+        height: auto;
+        padding: 0;
+    }
+
+    .vsl-doctor-info h2 {
+        font-size: 28px;
+    }
+
+    .vsl-doctor-info p {
+        font-size: 16px !important;
+    }
+
+    .vsl-doctor-image {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+        height: 250px;
+    }
+
+    /* 4. Stack the pricing charts */
+    .product-cards-vsl {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        margin-top: 60px;
+    }
+
+    .vsl-card {
+        max-width: 100%;
+        width: 100%;
+        padding-bottom: 60px;
+        background: #f3fafa;
+        border-radius: 24px;
+        overflow: hidden;
+    }
+
+    .vsl-card.featured {
+        margin-top: 0;
+        order: 1; /* Best Value first */
+    }
+
+    .vsl-card.right-card {
+        order: 2; /* 3-bottle second */
+    }
+
+    .vsl-card:not(.featured):not(.right-card) {
+        order: 3; /* 1-bottle last */
+    }
+
+    /* Header for mobile */
+    .card-featured-header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0 20px;
+        height: 60px;
+        border-radius: 0;
+    }
+
+    .vsl-card:not(.featured) .card-featured-header {
+        background: #e0eceb;
+        color: #003327;
+    }
+
+    /* Move qty badge to top right of the entire card */
+    .qty-badge {
+        position: absolute;
+        top: 13px;
+        right: 20px;
+        width: auto;
+        height: 34px;
+        background: white !important;
+        color: #003327 !important;
+        border-radius: 40px;
+        padding: 0 15px;
+        font-size: 16px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+    }
+
+    .qty-badge::after {
+        content: " Bottles";
+    }
+
+    /* Re-layout card content */
+    .card-content {
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 140px 1fr;
+        column-gap: 15px;
+        text-align: left;
+        align-items: start;
+        position: relative;
+    }
+
+    .card-image {
+        grid-row: 1 / 7;
+        grid-column: 1;
+        width: 100%;
+        height: 180px;
+        margin: 0;
+        background: white;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: start;
+    }
+
+    .card-image img {
+        width: 85%;
+        height: auto;
+    }
+
+    .save-badge-star {
+        width: 50px;
+        height: 50px;
+        font-size: 12px;
+        top: auto;
+        bottom: 5px;
+        right: 5px;
+    }
+
+    .card-label {
+        grid-column: 2;
+        grid-row: 1;
+        font-size: 14px !important;
+        margin-bottom: 0;
+    }
+
+    .card-h3 {
+        grid-column: 2;
+        grid-row: 2;
+        font-size: 20px !important;
+        margin-bottom: 5px;
+    }
+
+    /* Price Section */
+    .price-main {
+        grid-column: 2;
+        grid-row: 3;
+        justify-content: flex-start;
+        margin: 5px 0;
+    }
+
+    .price-main .amount {
+        font-size: 48px;
+    }
+
+    .price-main .currency,
+    .price-details .cents {
+        font-size: 24px;
+    }
+
+    .price-details .per {
+        font-size: 16px;
+    }
+
+    .guarantee-text {
+        grid-column: 2;
+        grid-row: 4;
+        margin: 5px 0;
+        font-size: 15px !important;
+    }
+
+    .payment-icons {
+        grid-column: 2;
+        grid-row: 5;
+        width: 140px;
+        height: auto;
+        margin-top: 5px;
+    }
+
+    .card-p {
+        display: none;
+        /* Already in header */
+    }
+
+    /* Benefits in 3 columns */
+    .card-benefits {
+        grid-column: 1 / 3;
+        grid-row: 7;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        background: white;
+        border-radius: 16px;
+        padding: 15px 5px;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .benefit-row {
+        flex-direction: column;
+        padding: 0;
+        gap: 8px;
+        font-size: 13px;
+        border-right: 1px solid #eee;
+    }
+
+    .benefit-row:last-child {
+        border-right: none;
+    }
+
+    .benefit-row img {
+        width: 24px;
+        height: 24px;
+    }
+
+    /* Hide the dividers used on desktop */
+    .card-benefits div[style*="border-bottom"] {
+        display: none;
+    }
+
+    /* Purchase options full width */
+    .purchase-option {
+        grid-column: 1 / 3;
+        margin-top: 15px;
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .vsl-buy-btn {
+        grid-column: 1 / 3;
+        margin-top: 15px;
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    .vsl-buy-btn .icon-box {
+        width: 50px;
+        height: 52px;
+        right: -10px;
+    }
+
+    /* 5. Stack the free mystery gift */
+    .free-gift-banner {
+        height: auto;
+        padding: 120px 20px 40px;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .gift-bg {
+        left: 50%;
+        transform: translateX(-50%);
+        top: -40px;
+        width: 100px;
+        height: auto;
+    }
+
+    .gift-content h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .gift-content p {
+        max-width: 100%;
+        font-size: 16px !important;
+    }
+
+    .gift-badge {
+        position: relative;
+        top: 0;
+        right: 0;
+        transform: none;
+        margin: 20px auto 0;
+        width: 100px;
+        height: 100px;
+    }
+
+    .gift-badge span:first-child {
+        font-size: 28px;
+    }
+
+    /* 6. Stack the guarantee section */
+    .vsl-guarantee {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+        gap: 20px;
+        padding: 40px 20px;
+    }
+
+    .guarantee-seal {
+        margin: 0 auto;
+        width: 140px;
+    }
+
+    .guarantee-content h3 {
+        font-size: 28px;
+    }
+
+    .guarantee-content p {
+        font-size: 16px !important;
+    }
+
+    /* Trust Section adjustments */
+    .vsl-trust-section {
+        padding: 40px 0;
+    }
+
+    .logo-flex {
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .logo-flex img:nth-child(1) {
+        width: 100px;
+        height: auto;
+    }
+
+    .logo-flex img:nth-child(2) {
+        width: 140px;
+        height: auto;
+    }
+
+    .logo-flex img:nth-child(3) {
+        width: 100px;
+        height: auto;
+    }
+
+    .logo-flex img:nth-child(4) {
+        width: 60px;
+        height: auto;
+    }
+
+    .scientific-references {
+        flex-direction: column;
+        padding: 50px 20px 20px;
+        gap: 20px;
+    }
+
+    .ref-header {
+        font-size: 13px !important;
+        white-space: nowrap;
+        width: auto;
+        min-width: 200px;
+        padding: 8px 15px;
+    }
+
+    .ref-logos {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 0;
+    }
+
+    .ref-logos img {
+        max-width: 30%;
+        max-height: 40px;
+    }
+
+    /* Footer adjustments */
+    .footer-top {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .footer-links {
+        justify-content: center;
+    }
+
+    .navbar .container {
+        gap: 20px;
+
+    }
+
+    .nav-links {
+        display: none;
+        /* Hide nav links on mobile or make them a menu */
+    }
 }

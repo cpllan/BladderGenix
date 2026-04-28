@@ -528,3 +528,172 @@ p {
     60%       { transform: translateX(-4px); }
     80%       { transform: translateX(4px); }
 }
+
+/* ---------------- MOBILE OPTIMIZATIONS ---------------- */
+@media (max-width: 768px) {
+    /* Promo Banner */
+    .promo-banner {
+        height: auto;
+        padding: 15px 0;
+    }
+
+    .promo-container {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0 20px;
+    }
+
+    .promo-logo {
+        width: 120px;
+        height: auto;
+    }
+
+    .secure-info {
+        gap: 5px;
+    }
+
+    .secure-text, .secure-desc {
+        font-size: 11px; /* Small enough to fit on one line */
+    }
+
+    .secure-icon {
+        width: 10px;
+        height: 14px;
+    }
+
+    /* Main Layout */
+    .checkout-main {
+        padding: 30px 16px;
+    }
+
+    .checkout-heading {
+        font-size: 28px;
+        padding: 0 20px;
+        margin-bottom: 30px;
+    }
+
+    /* Steps Indicator */
+    .steps-container {
+        padding: 0 10px 30px 10px;
+        gap: 10px;
+    }
+
+    .step-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 18px;
+    }
+
+    .step-item p {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    /* Form Section */
+    .form-section {
+        padding: 30px 20px;
+    }
+
+    .checkout-step h2 {
+        font-size: 24px;
+    }
+
+    .input-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .input-group.half {
+        width: 100%;
+    }
+
+    .payment-fields {
+        padding: 20px;
+    }
+
+    .secure-server-box {
+        padding: 30px;
+        height: auto;
+    }
+
+    .payment-fields .input-row {
+        gap: 0;
+    }
+
+    .subsection-label {
+        font-size: 18px;
+    }
+
+    /* Guarantee Box */
+    .guarantee-box {
+        flex-direction: column;
+        padding: 30px 20px;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .guarantee-seal {
+        width: 140px;
+        height: auto;
+    }
+
+    .guarantee-text h3 {
+        font-size: 24px;
+    }
+
+    .guarantee-text p {
+        font-size: 16px;
+    }
+
+    /* Buyer Protection */
+    .buyer-protection {
+        padding: 30px 20px;
+    }
+
+    .buyer-protection h2 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .protection-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .protection-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .protection-item h4 {
+        font-size: 20px;
+    }
+
+    .protection-item p {
+        font-size: 16px;
+    }
+
+    /* Footer */
+    .checkout-footer {
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .checkout-footer .footer-logo {
+        width: 180px;
+    }
+
+    /* Trust Badges */
+    .form-trust-badges {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .form-trust-badges img {
+        max-width: 40%;
+        height: auto !important;
+    }
+}

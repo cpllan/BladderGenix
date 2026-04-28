@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,12 @@
     <meta name="description" content="Discover Dr. Joseph Feuerstein's breakthrough for better bladder control.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="vsl.css">
 </head>
+
 <body>
 
     <!-- Promotion Banner -->
@@ -42,452 +45,510 @@
                 <img src="assets/imgElements.svg" alt="Cart" width="24" height="24">
                 <img src="assets/imgFrame3.svg" alt="User" width="24" height="24">
             </div>
+            <!-- Hamburger Menu Icon -->
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <img src="assets/imgFooterLogo.svg" alt="BladderGenix Logo" height="32" width="180"
+                    style="filter: brightness(0) invert(1);">
+            </div>
+            <div class="close-menu" id="closeMenuBtn">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="mobile-nav-links">
+            <a href="#" class="nav-link">Shop</a>
+            <a href="#" class="nav-link">Health Partners</a>
+            <a href="#" class="nav-link">About Us</a>
+            <a href="#" class="nav-link">Blogs</a>
+        </div>
+        <div class="mobile-nav-actions">
+            <div class="currency flex items-center gap-md" style="margin-bottom: 30px;">
+                <img src="assets/imgUnitedStates.svg" alt="" width="24" height="24">
+                <span class="font-medium" style="font-size: 20px;">USD</span>
+            </div>
+            <div class="flex gap-xl">
+                <div class="action-item">
+                    <img src="assets/imgFrame2.svg" alt="Search" width="28" height="28"
+                        style="filter: brightness(0) invert(1);">
+                </div>
+                <div class="action-item">
+                    <img src="assets/imgElements.svg" alt="Cart" width="28" height="28"
+                        style="filter: brightness(0) invert(1);">
+                </div>
+                <div class="action-item">
+                    <img src="assets/imgFrame3.svg" alt="User" width="28" height="28"
+                        style="filter: brightness(0) invert(1);">
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Main Content Section -->
     <main class="vsl-main">
         <div class="vsl-hero">
-                <div class="vsl-header">
-                    <p class="vsl-eyebrow">Ivy League MD:</p>
-                    <h1 class="vsl-headline">“This Rare Australian Plant Helps <br><span class="highlight">Reduce Pee Leaks & Frequent Urges”</span></h1>
+            <div class="vsl-header">
+                <p class="vsl-eyebrow">Ivy League MD:</p>
+                <h1 class="vsl-headline">“This Rare Australian Plant Helps <br><span class="highlight">Reduce Pee Leaks
+                        & Frequent Urges”</span></h1>
+            </div>
+
+            <div class="vsl-video-container">
+                <div class="vsl-video-bg">
+                    <img src="assets/imgVslWoman.png" alt="Woman in distress" class="vsl-woman">
+                    <img src="assets/imgVslLeakVisual.png" alt="Pee leak visual" class="vsl-leak-visual">
                 </div>
 
-                <div class="vsl-video-container">
-                    <div class="vsl-video-bg">
-                        <img src="assets/imgVslWoman.png" alt="Woman in distress" class="vsl-woman">
-                        <img src="assets/imgVslLeakVisual.png" alt="Pee leak visual" class="vsl-leak-visual">
-                    </div>
-                    
-                    <button class="vsl-play-btn">
-                        <div class="vsl-play-inner">
-                            <img src="assets/imgVslPlayIcon.svg" alt="Play" class="play-icon">
-                            <div class="play-text">
-                                <span>Click To</span>
-                                <strong>Play Sound</strong>
-                            </div>
+                <button class="vsl-play-btn">
+                    <div class="vsl-play-inner">
+                        <img src="assets/imgVslPlayIcon.svg" alt="Play" class="play-icon">
+                        <div class="play-text">
+                            <span>Click To</span>
+                            <strong>Play Sound</strong>
                         </div>
-                    </button>
+                    </div>
+                </button>
 
-                    <div class="vsl-doctor-badge">
-                        <div class="vsl-doctor-badge-inner">
-                            <img src="assets/imgVslDrPortrait.png" alt="Dr. Joe Feuerstein">
+                <div class="vsl-doctor-badge">
+                    <div class="vsl-doctor-badge-inner">
+                        <img src="assets/imgVslDrPortrait.png" alt="Dr. Joe Feuerstein">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Doctor Section -->
+        <section class="vsl-doctor-section">
+            <div class="vsl-content-container">
+                <div class="vsl-doctor-info">
+                    <h2>Dr. Joe Feuerstein Top Rated MD</h2>
+                    <p>Dr. Joe Feuerstein, MD, is a physician, best selling author, Ivy League professor, and was the
+                        head of the largest natural health clinic in America for over 15 years. They treated thousands
+                        of women with incontinence. Dr. Joe is recognized as an expert on women’s health and through his
+                        research is at the cutting edge of highly-effective natural solutions for urinary leaks and
+                        urgency.</p>
+                </div>
+                <div class="vsl-doctor-image">
+                    <img src="assets/imgVslDrImage.png" alt="Dr. Joe Feuerstein Image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust & references -->
+        <section class="vsl-trust-section">
+            <div class="vsl-content-container">
+                <div class="as-seen-on">
+                    <p class="section-tag">AS SEEN ON</p>
+                    <div class="logo-flex">
+                        <img src="assets/imgVslNyMag.png" alt="New York Magazine">
+                        <img src="assets/imgVslCastleConnolly.png" alt="Castle Connolly">
+                        <img src="assets/imgVslTheWord.png" alt="The Word">
+                        <img src="assets/imgVslLogo4.png" alt="Logo 4">
+                    </div>
+                </div>
+
+                <div class="scientific-references">
+                    <div class="ref-header">
+                        SCIENTIFIC REFERENCES
+                    </div>
+                    <div class="ref-logos">
+                        <img src="assets/imgVslMountSinai.png" alt="Mount Sinai">
+                        <img src="assets/imgVslHarvard.png" alt="Harvard">
+                        <img src="assets/imgVslJn.png" alt="JN">
+                        <img src="assets/imgVslJamda.png" alt="JAMDA">
+                        <img src="assets/imgVslCdc.png" alt="CDC">
+                    </div>
+                </div>
+
+                <!-- Pricing Section -->
+                <div class="product-cards-vsl">
+                    <!-- Left Card - Starter -->
+                    <div class="vsl-card">
+                        <div class="qty-badge">1</div>
+                        <div class="card-content">
+                            <span class="card-label">STARTER</span>
+                            <h3 class="card-h3">30 Day Supply</h3>
+                            <p class="card-p">1 Bottle</p>
+
+                            <div class="card-image">
+                                <img src="assets/imgVsl1Bottle.png" alt="1 Bottle">
+                            </div>
+
+                            <div class="price-main">
+                                <span class="currency">$</span>
+                                <span class="amount">49</span>
+                                <div class="price-details">
+                                    <span class="cents">.95</span>
+                                    <span class="per">/bottle</span>
+                                </div>
+                            </div>
+
+                            <p style="font-size: 16px; font-weight: 500; margin-top: 15px;">Shipping Fee $6.95</p>
+
+                            <label class="purchase-option">
+                                <img src="assets/imgVslRadioSelected.svg" alt="" width="18" height="18">
+                                <span>One-Time Purchase</span>
+                            </label>
+                            <label class="purchase-option active">
+                                <img src="assets/imgVslRadioUnselected.svg" alt="" width="18" height="18">
+                                <span>Subscribe & Save for 10% OFF & FREE 1-Year Supply of Vitamin D3/K2</span>
+                            </label>
+
+                            <button class="vsl-buy-btn">
+                                Secure My Order <div class="icon-box"></div>
+                            </button>
+
+                            <p class="guarantee-text">90-Day Money Back Guarantee</p>
+                            <img src="assets/imgVslPaymentMethods.png" alt="Payment Methods" class="payment-icons">
+                        </div>
+                        <div class="card-footer-price">
+                            <span>Order Total</span>
+                            <span>$69.95</span>
+                            <span>$49.95</span>
+                        </div>
+                    </div>
+
+                    <!-- Middle Card - Best Value -->
+                    <div class="vsl-card featured">
+                        <div class="card-featured-header">
+                            Biggest Discount
+                        </div>
+                        <div class="qty-badge">6</div>
+
+                        <div class="card-content">
+                            <span class="card-label">TOTAL DIGESTIVE RESET</span>
+                            <h3 class="card-h3">180 Day Supply</h3>
+                            <p class="card-p">6 Bottles</p>
+
+                            <div class="card-image">
+                                <img src="assets/imgVsl6Bottles.png" alt="6 Bottles">
+                                <div class="save-badge-star">
+                                    Save<br>$243
+                                </div>
+                            </div>
+
+                            <div class="price-main">
+                                <span class="currency">$</span>
+                                <span class="amount">30</span>
+                                <div class="price-details">
+                                    <span class="cents">.00</span>
+                                    <span class="per">/bottle</span>
+                                </div>
+                            </div>
+
+                            <div class="card-benefits">
+                                <div class="benefit-row">
+                                    <img src="assets/imgVslBulletGreen.svg" alt="">
+                                    <span>Biggest Discount</span>
+                                </div>
+                                <div style="border-bottom: 1px solid #e0e0e0; margin: 0 20px;"></div>
+                                <div class="benefit-row">
+                                    <img src="assets/imgVslBulletGreen3.svg" alt="">
+                                    <span>Fast, Free Shipping</span>
+                                </div>
+                                <div style="border-bottom: 1px solid #e0e0e0; margin: 0 20px;"></div>
+                                <div class="benefit-row">
+                                    <img src="assets/imgVslCheckGreen2.svg" alt="">
+                                    <span>Free Bonus Gift</span>
+                                </div>
+                            </div>
+
+                            <label class="purchase-option">
+                                <img src="assets/imgVslRadioSelected.svg" alt="" width="18" height="18">
+                                <span>One-Time Purchase</span>
+                            </label>
+                            <label class="purchase-option active">
+                                <img src="assets/imgVslRadioUnselected.svg" alt="" width="18" height="18">
+                                <span>Subscribe & Save for 10% OFF & FREE 1-Year Supply of Vitamin D3/K2</span>
+                            </label>
+
+                            <button class="vsl-buy-btn">
+                                Secure My Order <div class="icon-box"></div>
+                            </button>
+
+                            <p class="guarantee-text">90-Day Money Back Guarantee</p>
+                            <img src="assets/imgVslPaymentMethods.png" alt="Payment Methods" class="payment-icons">
+                        </div>
+                        <div class="card-footer-price">
+                            <span>Order Total</span>
+                            <span>$419.70</span>
+                            <span>$176.99</span>
+                        </div>
+                    </div>
+
+                    <!-- Right Card - Doctor's Choice -->
+                    <div class="vsl-card right-card">
+                        <div class="qty-badge">3</div>
+                        <div class="card-content">
+                            <span class="card-label">DOCTOR’S CHOICE</span>
+                            <h3 class="card-h3">90 Day Supply</h3>
+                            <p class="card-p">3 Bottles</p>
+
+                            <div class="card-image">
+                                <img src="assets/imgVsl3Bottles.png" alt="3 Bottles">
+                                <div class="save-badge-star">
+                                    Save<br>$81
+                                </div>
+                            </div>
+
+                            <div class="price-main">
+                                <span class="currency">$</span>
+                                <span class="amount">43</span>
+                                <div class="price-details">
+                                    <span class="cents">.00</span>
+                                    <span class="per">/bottle</span>
+                                </div>
+                            </div>
+
+                            <div class="benefit-row"
+                                style="margin-top: 15px; width: 100%; border-radius: 10px; background: white;">
+                                <img src="assets/imgVslCheckGreen.svg" alt="">
+                                <span>Fast, Free Shipping</span>
+                            </div>
+
+                            <label class="purchase-option">
+                                <img src="assets/imgVslRadioSelected.svg" alt="" width="18" height="18">
+                                <span>One-Time Purchase</span>
+                            </label>
+                            <label class="purchase-option active">
+                                <img src="assets/imgVslRadioUnselected.svg" alt="" width="18" height="18">
+                                <span>Subscribe & Save for 10% OFF & FREE 1-Year Supply of Vitamin D3/K2</span>
+                            </label>
+
+                            <button class="vsl-buy-btn">
+                                Secure My Order <div class="icon-box"></div>
+                            </button>
+
+                            <p class="guarantee-text">90-Day Money Back Guarantee</p>
+                            <img src="assets/imgVslPaymentMethods.png" alt="Payment Methods" class="payment-icons">
+                        </div>
+                        <div class="card-footer-price">
+                            <span>Order Total</span>
+                            <span>$209.85</span>
+                            <span>$129.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Free Gift Banner -->
+                <div class="free-gift-banner">
+                    <img src="assets/imgVslMysteryGift.png" alt="Mystery Gift" class="gift-bg">
+                    <div class="gift-content">
+                        <h3>Free Mystery Gift With Six-Bottle Orders</h3>
+                        <p>#1 Best-Seller And Perfect Addition To BladderGenix For An Even Bigger Boost To Your Bladder
+                            Strength, Control & Bladder Health.</p>
+                    </div>
+                    <div class="gift-badge">
+                        <span>$49</span>
+                        <span>Value</span>
+                    </div>
+                </div>
+
+                <!-- Guarantee Section -->
+                <div class="vsl-guarantee">
+                    <img src="assets/imgGuaranteeSeal.svg" alt="Guarantee" class="guarantee-seal">
+                    <div class="guarantee-content">
+                        <h3>90-Day Money-Back Guarantee</h3>
+                        <p>Try out BladderGenix out risk free for 90 days - that's three full months - and if you don't
+                            love how much more control you have, then call us for a full refund, including and shipping.
+                            No questions asked and no hassles.</p>
+                        <p>Call support at 1-855-828-2772 or email help@revivalpoint.com, 9am-9pm Eastern, 7 days a week
+                            to talk to a friendly agent.</p>
+                    </div>
+                </div>
+                <!-- Repeated Pricing Cards -->
+                <div class="product-cards-vsl">
+                    <!-- Left Card - Starter -->
+                    <div class="vsl-card">
+                        <div class="qty-badge">1</div>
+                        <div class="card-content">
+                            <span class="card-label">STARTER</span>
+                            <h3 class="card-h3">30 Day Supply</h3>
+                            <p class="card-p">1 Bottle</p>
+
+                            <div class="card-image">
+                                <img src="assets/imgVsl1Bottle.png" alt="1 Bottle">
+                            </div>
+
+                            <div class="price-main">
+                                <span class="currency">$</span>
+                                <span class="amount">49</span>
+                                <div class="price-details">
+                                    <span class="cents">.95</span>
+                                    <span class="per">/bottle</span>
+                                </div>
+                            </div>
+
+                            <p style="font-size: 16px; font-weight: 500; margin-top: 15px;">Shipping Fee $6.95</p>
+
+                            <label class="purchase-option">
+                                <img src="assets/imgVslRadioSelected.svg" alt="" width="18" height="18">
+                                <span>One-Time Purchase</span>
+                            </label>
+                            <label class="purchase-option active">
+                                <img src="assets/imgVslRadioUnselected.svg" alt="" width="18" height="18">
+                                <span>Subscribe & Save for 10% OFF & FREE 1-Year Supply of Vitamin D3/K2</span>
+                            </label>
+
+                            <button class="vsl-buy-btn">
+                                Secure My Order <div class="icon-box"></div>
+                            </button>
+
+                            <p class="guarantee-text">90-Day Money Back Guarantee</p>
+                            <img src="assets/imgVslPaymentMethods.png" alt="Payment Methods" class="payment-icons">
+                        </div>
+                        <div class="card-footer-price">
+                            <span>Order Total</span>
+                            <span>$69.95</span>
+                            <span>$49.95</span>
+                        </div>
+                    </div>
+
+                    <!-- Middle Card - Best Value -->
+                    <div class="vsl-card featured">
+                        <div class="card-featured-header">
+                            Biggest Discount
+                        </div>
+                        <div class="qty-badge">6</div>
+
+                        <div class="card-content">
+                            <span class="card-label">TOTAL DIGESTIVE RESET</span>
+                            <h3 class="card-h3">180 Day Supply</h3>
+                            <p class="card-p">6 Bottles</p>
+
+                            <div class="card-image">
+                                <img src="assets/imgVsl6Bottles.png" alt="6 Bottles">
+                                <div class="save-badge-star">
+                                    Save<br>$243
+                                </div>
+                            </div>
+
+                            <div class="price-main">
+                                <span class="currency">$</span>
+                                <span class="amount">30</span>
+                                <div class="price-details">
+                                    <span class="cents">.00</span>
+                                    <span class="per">/bottle</span>
+                                </div>
+                            </div>
+
+                            <div class="card-benefits">
+                                <div class="benefit-row">
+                                    <img src="assets/imgVslBulletGreen.svg" alt="">
+                                    <span>Biggest Discount</span>
+                                </div>
+                                <div style="border-bottom: 1px solid #e0e0e0; margin: 0 20px;"></div>
+                                <div class="benefit-row">
+                                    <img src="assets/imgVslBulletGreen3.svg" alt="">
+                                    <span>Fast, Free Shipping</span>
+                                </div>
+                                <div style="border-bottom: 1px solid #e0e0e0; margin: 0 20px;"></div>
+                                <div class="benefit-row">
+                                    <img src="assets/imgVslCheckGreen2.svg" alt="">
+                                    <span>Free Bonus Gift</span>
+                                </div>
+                            </div>
+
+                            <label class="purchase-option">
+                                <img src="assets/imgVslRadioSelected.svg" alt="" width="18" height="18">
+                                <span>One-Time Purchase</span>
+                            </label>
+                            <label class="purchase-option active">
+                                <img src="assets/imgVslRadioUnselected.svg" alt="" width="18" height="18">
+                                <span>Subscribe & Save for 10% OFF & FREE 1-Year Supply of Vitamin D3/K2</span>
+                            </label>
+
+                            <button class="vsl-buy-btn">
+                                Secure My Order <div class="icon-box"></div>
+                            </button>
+
+                            <p class="guarantee-text">90-Day Money Back Guarantee</p>
+                            <img src="assets/imgVslPaymentMethods.png" alt="Payment Methods" class="payment-icons">
+                        </div>
+                        <div class="card-footer-price">
+                            <span>Order Total</span>
+                            <span>$419.70</span>
+                            <span>$176.99</span>
+                        </div>
+                    </div>
+
+                    <!-- Right Card - Doctor's Choice -->
+                    <div class="vsl-card right-card">
+                        <div class="qty-badge">3</div>
+                        <div class="card-content">
+                            <span class="card-label">DOCTOR’S CHOICE</span>
+                            <h3 class="card-h3">90 Day Supply</h3>
+                            <p class="card-p">3 Bottles</p>
+
+                            <div class="card-image">
+                                <img src="assets/imgVsl3Bottles.png" alt="3 Bottles">
+                                <div class="save-badge-star">
+                                    Save<br>$81
+                                </div>
+                            </div>
+
+                            <div class="price-main">
+                                <span class="currency">$</span>
+                                <span class="amount">43</span>
+                                <div class="price-details">
+                                    <span class="cents">.00</span>
+                                    <span class="per">/bottle</span>
+                                </div>
+                            </div>
+
+                            <div class="benefit-row"
+                                style="margin-top: 15px; width: 100%; border-radius: 10px; background: white;">
+                                <img src="assets/imgVslCheckGreen.svg" alt="">
+                                <span>Fast, Free Shipping</span>
+                            </div>
+
+                            <label class="purchase-option">
+                                <img src="assets/imgVslRadioSelected.svg" alt="" width="18" height="18">
+                                <span>One-Time Purchase</span>
+                            </label>
+                            <label class="purchase-option active">
+                                <img src="assets/imgVslRadioUnselected.svg" alt="" width="18" height="18">
+                                <span>Subscribe & Save for 10% OFF & FREE 1-Year Supply of Vitamin D3/K2</span>
+                            </label>
+
+                            <button class="vsl-buy-btn">
+                                Secure My Order <div class="icon-box"></div>
+                            </button>
+
+                            <p class="guarantee-text">90-Day Money Back Guarantee</p>
+                            <img src="assets/imgVslPaymentMethods.png" alt="Payment Methods" class="payment-icons">
+                        </div>
+                        <div class="card-footer-price">
+                            <span>Order Total</span>
+                            <span>$209.85</span>
+                            <span>$129.00</span>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Doctor Section -->
-            <section class="vsl-doctor-section">
-                <div class="vsl-content-container">
-                    <div class="vsl-doctor-info">
-                        <h2>Dr. Joe Feuerstein Top Rated MD</h2>
-                        <p>Dr. Joe Feuerstein, MD, is a physician, best selling author, Ivy League professor, and was the head of the largest natural health clinic in America for over 15 years. They treated thousands of women with incontinence. Dr. Joe is recognized as an expert on women’s health and through his research is at the cutting edge of highly-effective natural solutions for urinary leaks and urgency.</p>
-                    </div>
-                    <div class="vsl-doctor-image">
-                        <img src="assets/imgVslDrImage.png" alt="Dr. Joe Feuerstein Image">
-                    </div>
-                </div>
-            </section>
-
-            <!-- Trust & references -->
-            <section class="vsl-trust-section">
-                <div class="vsl-content-container">
-                    <div class="as-seen-on">
-                        <p class="section-tag">AS SEEN ON</p>
-                        <div class="logo-flex">
-                            <img src="assets/imgVslNyMag.png" alt="New York Magazine">
-                            <img src="assets/imgVslCastleConnolly.png" alt="Castle Connolly">
-                            <img src="assets/imgVslTheWord.png" alt="The Word">
-                            <img src="assets/imgVslLogo4.png" alt="Logo 4">
-                        </div>
-                    </div>
-
-                    <div class="scientific-references">
-                        <div class="ref-header">
-                            SCIENTIFIC REFERENCES
-                        </div>
-                        <div class="ref-logos">
-                            <img src="assets/imgVslMountSinai.png" alt="Mount Sinai">
-                            <img src="assets/imgVslHarvard.png" alt="Harvard">
-                            <img src="assets/imgVslJn.png" alt="JN">
-                            <img src="assets/imgVslJamda.png" alt="JAMDA">
-                            <img src="assets/imgVslCdc.png" alt="CDC">
-                        </div>
-                    </div>
-
-                    <!-- Pricing Section -->
-                    <div class="product-cards-vsl">
-                        <!-- Left Card - Starter -->
-                        <div class="vsl-card">
-                            <div class="qty-badge">1</div>
-                            <div class="card-content">
-                                <span class="card-label">STARTER</span>
-                                <h3 class="card-h3">30 Day Supply</h3>
-                                <p class="card-p">1 Bottle</p>
-                                
-                                <div class="card-image">
-                                    <img src="assets/imgVsl1Bottle.png" alt="1 Bottle">
-                                </div>
-                                
-                                <div class="price-main">
-                                    <span class="currency">$</span>
-                                    <span class="amount">49</span>
-                                    <div class="price-details">
-                                        <span class="cents">.95</span>
-                                        <span class="per">/bottle</span>
-                                    </div>
-                                </div>
-
-                                <p style="font-size: 16px; font-weight: 500; margin-top: 15px;">Shipping Fee $6.95</p>
-
-                                <label class="purchase-option">
-                                    <img src="assets/imgVslRadioSelected.svg" alt="" width="18" height="18">
-                                    <span>One-Time Purchase</span>
-                                </label>
-                                <label class="purchase-option active">
-                                    <img src="assets/imgVslRadioUnselected.svg" alt="" width="18" height="18">
-                                    <span>Subscribe & Save for 10% OFF & FREE 1-Year Supply of Vitamin D3/K2</span>
-                                </label>
-                                
-                                <button class="vsl-buy-btn">
-                                    Secure My Order <div class="icon-box"></div>
-                                </button>
-                                
-                                <p class="guarantee-text">90-Day Money Back Guarantee</p>
-                                <img src="assets/imgVslPaymentMethods.png" alt="Payment Methods" class="payment-icons">
-                            </div>
-                            <div class="card-footer-price">
-                                <span>Order Total</span>
-                                <span>$69.95</span>
-                                <span>$49.95</span>
-                            </div>
-                        </div>
-
-                        <!-- Middle Card - Best Value -->
-                        <div class="vsl-card featured">
-                            <div class="card-featured-header">
-                                Biggest Discount
-                            </div>
-                            <div class="qty-badge">6</div>
-                            
-                            <div class="card-content">
-                                <span class="card-label">TOTAL DIGESTIVE RESET</span>
-                                <h3 class="card-h3">180 Day Supply</h3>
-                                <p class="card-p">6 Bottles</p>
-                                
-                                <div class="card-image">
-                                    <img src="assets/imgVsl6Bottles.png" alt="6 Bottles">
-                                    <div class="save-badge-star">
-                                        Save<br>$243
-                                    </div>
-                                </div>
-                                
-                                <div class="price-main">
-                                    <span class="currency">$</span>
-                                    <span class="amount">30</span>
-                                    <div class="price-details">
-                                        <span class="cents">.00</span>
-                                        <span class="per">/bottle</span>
-                                    </div>
-                                </div>
-                                
-                                <div class="card-benefits">
-                                    <div class="benefit-row">
-                                        <img src="assets/imgVslBulletGreen.svg" alt="">
-                                        <span>Biggest Discount</span>
-                                    </div>
-                                    <div style="border-bottom: 1px solid #e0e0e0; margin: 0 20px;"></div>
-                                    <div class="benefit-row">
-                                        <img src="assets/imgVslBulletGreen3.svg" alt="">
-                                        <span>Fast, Free Shipping</span>
-                                    </div>
-                                    <div style="border-bottom: 1px solid #e0e0e0; margin: 0 20px;"></div>
-                                    <div class="benefit-row">
-                                        <img src="assets/imgVslCheckGreen2.svg" alt="">
-                                        <span>Free Bonus Gift</span>
-                                    </div>
-                                </div>
-
-                                <label class="purchase-option">
-                                    <img src="assets/imgVslRadioSelected.svg" alt="" width="18" height="18">
-                                    <span>One-Time Purchase</span>
-                                </label>
-                                <label class="purchase-option active">
-                                    <img src="assets/imgVslRadioUnselected.svg" alt="" width="18" height="18">
-                                    <span>Subscribe & Save for 10% OFF & FREE 1-Year Supply of Vitamin D3/K2</span>
-                                </label>
-                                
-                                <button class="vsl-buy-btn">
-                                    Secure My Order <div class="icon-box"></div>
-                                </button>
-                                
-                                <p class="guarantee-text">90-Day Money Back Guarantee</p>
-                                <img src="assets/imgVslPaymentMethods.png" alt="Payment Methods" class="payment-icons">
-                            </div>
-                            <div class="card-footer-price">
-                                <span>Order Total</span>
-                                <span>$419.70</span>
-                                <span>$176.99</span>
-                            </div>
-                        </div>
-
-                        <!-- Right Card - Doctor's Choice -->
-                        <div class="vsl-card right-card">
-                            <div class="qty-badge">3</div>
-                            <div class="card-content">
-                                <span class="card-label">DOCTOR’S CHOICE</span>
-                                <h3 class="card-h3">90 Day Supply</h3>
-                                <p class="card-p">3 Bottles</p>
-                                
-                                <div class="card-image">
-                                    <img src="assets/imgVsl3Bottles.png" alt="3 Bottles">
-                                    <div class="save-badge-star">
-                                        Save<br>$81
-                                    </div>
-                                </div>
-                                
-                                <div class="price-main">
-                                    <span class="currency">$</span>
-                                    <span class="amount">43</span>
-                                    <div class="price-details">
-                                        <span class="cents">.00</span>
-                                        <span class="per">/bottle</span>
-                                    </div>
-                                </div>
-                                
-                                <div class="benefit-row" style="margin-top: 15px; width: 100%; border-radius: 10px; background: white;">
-                                    <img src="assets/imgVslCheckGreen.svg" alt="">
-                                    <span>Fast, Free Shipping</span>
-                                </div>
-
-                                <label class="purchase-option">
-                                    <img src="assets/imgVslRadioSelected.svg" alt="" width="18" height="18">
-                                    <span>One-Time Purchase</span>
-                                </label>
-                                <label class="purchase-option active">
-                                    <img src="assets/imgVslRadioUnselected.svg" alt="" width="18" height="18">
-                                    <span>Subscribe & Save for 10% OFF & FREE 1-Year Supply of Vitamin D3/K2</span>
-                                </label>
-                                
-                                <button class="vsl-buy-btn">
-                                    Secure My Order <div class="icon-box"></div>
-                                </button>
-                                
-                                <p class="guarantee-text">90-Day Money Back Guarantee</p>
-                                <img src="assets/imgVslPaymentMethods.png" alt="Payment Methods" class="payment-icons">
-                            </div>
-                            <div class="card-footer-price">
-                                <span>Order Total</span>
-                                <span>$209.85</span>
-                                <span>$129.00</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Free Gift Banner -->
-                    <div class="free-gift-banner">
-                        <img src="assets/imgVslMysteryGift.png" alt="Mystery Gift" class="gift-bg">
-                        <div class="gift-content">
-                            <h3>Free Mystery Gift With Six-Bottle Orders</h3>
-                            <p>#1 Best-Seller And Perfect Addition To BladderGenix For An Even Bigger Boost To Your Bladder Strength, Control & Bladder Health.</p>
-                        </div>
-                        <div class="gift-badge">
-                            <span>$49</span>
-                            <span>Value</span>
-                        </div>
-                    </div>
-
-                    <!-- Guarantee Section -->
-                    <div class="vsl-guarantee">
-                        <img src="assets/imgGuaranteeSeal.svg" alt="Guarantee" class="guarantee-seal">
-                        <div class="guarantee-content">
-                            <h3>90-Day Money-Back Guarantee</h3>
-                            <p>Try out BladderGenix out risk free for 90 days - that's three full months - and if you don't love how much more control you have, then call us for a full refund, including and shipping. No questions asked and no hassles.</p>
-                            <p>Call support at 1-855-828-2772 or email help@revivalpoint.com, 9am-9pm Eastern, 7 days a week to talk to a friendly agent.</p>
-                        </div>
-                    </div>
-                    <!-- Repeated Pricing Cards -->
-                    <div class="product-cards-vsl">
-                        <!-- Left Card - Starter -->
-                        <div class="vsl-card">
-                            <div class="qty-badge">1</div>
-                            <div class="card-content">
-                                <span class="card-label">STARTER</span>
-                                <h3 class="card-h3">30 Day Supply</h3>
-                                <p class="card-p">1 Bottle</p>
-                                
-                                <div class="card-image">
-                                    <img src="assets/imgVsl1Bottle.png" alt="1 Bottle">
-                                </div>
-                                
-                                <div class="price-main">
-                                    <span class="currency">$</span>
-                                    <span class="amount">49</span>
-                                    <div class="price-details">
-                                        <span class="cents">.95</span>
-                                        <span class="per">/bottle</span>
-                                    </div>
-                                </div>
-
-                                <p style="font-size: 16px; font-weight: 500; margin-top: 15px;">Shipping Fee $6.95</p>
-
-                                <label class="purchase-option">
-                                    <img src="assets/imgVslRadioSelected.svg" alt="" width="18" height="18">
-                                    <span>One-Time Purchase</span>
-                                </label>
-                                <label class="purchase-option active">
-                                    <img src="assets/imgVslRadioUnselected.svg" alt="" width="18" height="18">
-                                    <span>Subscribe & Save for 10% OFF & FREE 1-Year Supply of Vitamin D3/K2</span>
-                                </label>
-                                
-                                <button class="vsl-buy-btn">
-                                    Secure My Order <div class="icon-box"></div>
-                                </button>
-                                
-                                <p class="guarantee-text">90-Day Money Back Guarantee</p>
-                                <img src="assets/imgVslPaymentMethods.png" alt="Payment Methods" class="payment-icons">
-                            </div>
-                            <div class="card-footer-price">
-                                <span>Order Total</span>
-                                <span>$69.95</span>
-                                <span>$49.95</span>
-                            </div>
-                        </div>
-
-                        <!-- Middle Card - Best Value -->
-                        <div class="vsl-card featured">
-                            <div class="card-featured-header">
-                                Biggest Discount
-                            </div>
-                            <div class="qty-badge">6</div>
-                            
-                            <div class="card-content">
-                                <span class="card-label">TOTAL DIGESTIVE RESET</span>
-                                <h3 class="card-h3">180 Day Supply</h3>
-                                <p class="card-p">6 Bottles</p>
-                                
-                                <div class="card-image">
-                                    <img src="assets/imgVsl6Bottles.png" alt="6 Bottles">
-                                    <div class="save-badge-star">
-                                        Save<br>$243
-                                    </div>
-                                </div>
-                                
-                                <div class="price-main">
-                                    <span class="currency">$</span>
-                                    <span class="amount">30</span>
-                                    <div class="price-details">
-                                        <span class="cents">.00</span>
-                                        <span class="per">/bottle</span>
-                                    </div>
-                                </div>
-                                
-                                <div class="card-benefits">
-                                    <div class="benefit-row">
-                                        <img src="assets/imgVslBulletGreen.svg" alt="">
-                                        <span>Biggest Discount</span>
-                                    </div>
-                                    <div style="border-bottom: 1px solid #e0e0e0; margin: 0 20px;"></div>
-                                    <div class="benefit-row">
-                                        <img src="assets/imgVslBulletGreen3.svg" alt="">
-                                        <span>Fast, Free Shipping</span>
-                                    </div>
-                                    <div style="border-bottom: 1px solid #e0e0e0; margin: 0 20px;"></div>
-                                    <div class="benefit-row">
-                                        <img src="assets/imgVslCheckGreen2.svg" alt="">
-                                        <span>Free Bonus Gift</span>
-                                    </div>
-                                </div>
-
-                                <label class="purchase-option">
-                                    <img src="assets/imgVslRadioSelected.svg" alt="" width="18" height="18">
-                                    <span>One-Time Purchase</span>
-                                </label>
-                                <label class="purchase-option active">
-                                    <img src="assets/imgVslRadioUnselected.svg" alt="" width="18" height="18">
-                                    <span>Subscribe & Save for 10% OFF & FREE 1-Year Supply of Vitamin D3/K2</span>
-                                </label>
-                                
-                                <button class="vsl-buy-btn">
-                                    Secure My Order <div class="icon-box"></div>
-                                </button>
-                                
-                                <p class="guarantee-text">90-Day Money Back Guarantee</p>
-                                <img src="assets/imgVslPaymentMethods.png" alt="Payment Methods" class="payment-icons">
-                            </div>
-                            <div class="card-footer-price">
-                                <span>Order Total</span>
-                                <span>$419.70</span>
-                                <span>$176.99</span>
-                            </div>
-                        </div>
-
-                        <!-- Right Card - Doctor's Choice -->
-                        <div class="vsl-card right-card">
-                            <div class="qty-badge">3</div>
-                            <div class="card-content">
-                                <span class="card-label">DOCTOR’S CHOICE</span>
-                                <h3 class="card-h3">90 Day Supply</h3>
-                                <p class="card-p">3 Bottles</p>
-                                
-                                <div class="card-image">
-                                    <img src="assets/imgVsl3Bottles.png" alt="3 Bottles">
-                                    <div class="save-badge-star">
-                                        Save<br>$81
-                                    </div>
-                                </div>
-                                
-                                <div class="price-main">
-                                    <span class="currency">$</span>
-                                    <span class="amount">43</span>
-                                    <div class="price-details">
-                                        <span class="cents">.00</span>
-                                        <span class="per">/bottle</span>
-                                    </div>
-                                </div>
-                                
-                                <div class="benefit-row" style="margin-top: 15px; width: 100%; border-radius: 10px; background: white;">
-                                    <img src="assets/imgVslCheckGreen.svg" alt="">
-                                    <span>Fast, Free Shipping</span>
-                                </div>
-
-                                <label class="purchase-option">
-                                    <img src="assets/imgVslRadioSelected.svg" alt="" width="18" height="18">
-                                    <span>One-Time Purchase</span>
-                                </label>
-                                <label class="purchase-option active">
-                                    <img src="assets/imgVslRadioUnselected.svg" alt="" width="18" height="18">
-                                    <span>Subscribe & Save for 10% OFF & FREE 1-Year Supply of Vitamin D3/K2</span>
-                                </label>
-                                
-                                <button class="vsl-buy-btn">
-                                    Secure My Order <div class="icon-box"></div>
-                                </button>
-                                
-                                <p class="guarantee-text">90-Day Money Back Guarantee</p>
-                                <img src="assets/imgVslPaymentMethods.png" alt="Payment Methods" class="payment-icons">
-                            </div>
-                            <div class="card-footer-price">
-                                <span>Order Total</span>
-                                <span>$209.85</span>
-                                <span>$129.00</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+        </section>
     </main>
 
     <footer class="vsl-footer">
         <div class="vsl-content-container">
             <div class="footer-top">
                 <img src="assets/imgFooterLogo.svg" alt="Revival Point" class="footer-logo">
-                <p>Consult a doctor before use. Not evaluated by FDA. Not intended to diagnose, treat, or cure disease.</p>
+                <p>Consult a doctor before use. Not evaluated by FDA. Not intended to diagnose, treat, or cure disease.
+                </p>
             </div>
-            
+
             <div class="footer-divider"></div>
-            
+
             <div class="footer-bottom">
                 <div class="footer-links">
                     <a href="#">Site Privacy</a>
@@ -495,7 +556,8 @@
                 </div>
                 <p class="footer-copyright">Copyright 2024 | Revival Point™</p>
                 <div class="footer-socials">
-                    <a href="#" class="social-btn instagram"><img src="assets/imgVslSocialInstagram.svg" alt="Instagram"></a>
+                    <a href="#" class="social-btn instagram"><img src="assets/imgVslSocialInstagram.svg"
+                            alt="Instagram"></a>
                     <a href="#" class="social-btn"><img src="assets/imgVslSocialX.svg" alt="Tiktok"></a>
                     <a href="#" class="social-btn"><img src="assets/imgVslSocialFb.svg" alt="Facebook"></a>
                 </div>
@@ -504,8 +566,35 @@
     </footer>
 
     <script>
+        // Mobile Menu Logic
+        const hamburger = document.querySelector('.hamburger-menu');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const closeBtn = document.getElementById('closeMenuBtn');
+
+        if (hamburger) {
+            hamburger.addEventListener('click', function () {
+                mobileMenu.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        }
+
+        if (closeBtn) {
+            closeBtn.addEventListener('click', function () {
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        }
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.mobile-nav-links .nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
         // Video play button
-        document.querySelector('.vsl-play-btn').addEventListener('click', function() {
+        document.querySelector('.vsl-play-btn').addEventListener('click', function () {
             this.style.display = 'none';
         });
 
@@ -516,7 +605,7 @@
         document.querySelectorAll('.vsl-card').forEach(card => {
             const options = card.querySelectorAll('.purchase-option');
             options.forEach(option => {
-                option.addEventListener('click', function() {
+                option.addEventListener('click', function () {
                     // Reset all options in this card
                     options.forEach(opt => {
                         opt.classList.remove('active');
@@ -530,4 +619,5 @@
         });
     </script>
 </body>
+
 </html>
