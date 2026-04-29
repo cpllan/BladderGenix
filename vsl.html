@@ -37,19 +37,64 @@
                 <a href="#" class="nav-link">Blogs</a>
             </div>
             <div class="nav-actions flex items-center gap-lg">
-                <div class="currency flex items-center gap-sm">
-                    <img src="assets/imgUnitedStates.svg" alt="" width="20" height="20">
-                    <span class="font-medium">USD</span>
+                <div class="currency flex items-center gap-sm" id="currencySelector">
+                    <img src="assets/imgUnitedStates.svg" alt="" width="20" height="20" id="currentCurrencyFlag">
+                    <span class="font-medium" id="currentCurrencyText">USD</span>
+                    <svg class="dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <div class="currency-dropdown" id="currencyDropdown">
+                        <div class="currency-option" data-currency="USD" data-flag="assets/imgUnitedStates.svg">
+                            <img src="assets/imgUnitedStates.svg" alt="" width="20" height="20">
+                            <span>USD</span>
+                        </div>
+                        <div class="currency-option" data-currency="EUR" data-flag="https://flagcdn.com/w20/eu.png">
+                            <img src="https://flagcdn.com/w20/eu.png" alt="" width="20" height="20">
+                            <span>EUR</span>
+                        </div>
+                        <div class="currency-option" data-currency="GBP" data-flag="https://flagcdn.com/w20/gb.png">
+                            <img src="https://flagcdn.com/w20/gb.png" alt="" width="20" height="20">
+                            <span>GBP</span>
+                        </div>
+                        <div class="currency-option" data-currency="CAD" data-flag="https://flagcdn.com/w20/ca.png">
+                            <img src="https://flagcdn.com/w20/ca.png" alt="" width="20" height="20">
+                            <span>CAD</span>
+                        </div>
+                    </div>
                 </div>
-                <img src="assets/imgFrame2.svg" alt="Search" width="24" height="24">
-                <img src="assets/imgElements.svg" alt="Cart" width="24" height="24">
-                <img src="assets/imgFrame3.svg" alt="User" width="24" height="24">
+                <div class="action-icon" id="searchIcon">
+                    <img src="assets/imgFrame2.svg" alt="Search" width="24" height="24">
+                </div>
+                <div class="action-icon cart-icon-wrapper" id="cartIcon">
+                    <img src="assets/imgElements.svg" alt="Cart" width="24" height="24">
+                    <span class="cart-count">0</span>
+                </div>
+                <div class="action-icon" id="profileIcon">
+                    <img src="assets/imgFrame3.svg" alt="User" width="24" height="24">
+                    <div class="profile-dropdown" id="profileDropdown">
+                        <a href="#"><img src="assets/imgFrame3.svg" alt="" width="18" height="18"> My Account</a>
+                        <a href="#"><img src="assets/imgFrame.svg" alt="" width="18" height="18"> Orders</a>
+                        <hr>
+                        <a href="#" style="color: #ff4d4d;">Logout</a>
+                    </div>
+                </div>
             </div>
             <!-- Hamburger Menu Icon -->
             <div class="hamburger-menu">
                 <span></span>
                 <span></span>
                 <span></span>
+            </div>
+
+            <!-- Search Overlay (Header Only) -->
+            <div class="search-overlay" id="searchOverlay">
+                <div class="container flex items-center gap-lg">
+                    <div class="search-input-wrapper flex-1">
+                        <img src="assets/imgFrame2.svg" alt="" width="20" height="20">
+                        <input type="text" placeholder="Search for products..." id="searchInput">
+                    </div>
+                    <button class="close-search" id="closeSearch">&times;</button>
+                </div>
             </div>
         </div>
     </nav>
@@ -75,20 +120,23 @@
             <a href="#" class="nav-link">Blogs</a>
         </div>
         <div class="mobile-nav-actions">
-            <div class="currency flex items-center gap-md" style="margin-bottom: 30px;">
-                <img src="assets/imgUnitedStates.svg" alt="" width="24" height="24">
-                <span class="font-medium" style="font-size: 20px;">USD</span>
+            <div class="currency flex items-center gap-md" style="margin-bottom: 30px;" id="mobileCurrencySelector">
+                <img src="assets/imgUnitedStates.svg" alt="" width="24" height="24" id="mobileCurrentCurrencyFlag">
+                <span class="font-medium" style="font-size: 20px;" id="mobileCurrentCurrencyText">USD</span>
+                <svg class="dropdown-arrow" width="12" height="8" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" style="filter: brightness(0) invert(1);">
+                    <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
             </div>
             <div class="flex gap-xl">
-                <div class="action-item">
+                <div class="action-item" id="mobileSearchIcon">
                     <img src="assets/imgFrame2.svg" alt="Search" width="28" height="28"
                         style="filter: brightness(0) invert(1);">
                 </div>
-                <div class="action-item">
+                <div class="action-item" id="mobileCartIcon">
                     <img src="assets/imgElements.svg" alt="Cart" width="28" height="28"
                         style="filter: brightness(0) invert(1);">
                 </div>
-                <div class="action-item">
+                <div class="action-item" id="mobileProfileIcon">
                     <img src="assets/imgFrame3.svg" alt="User" width="28" height="28"
                         style="filter: brightness(0) invert(1);">
                 </div>
@@ -567,6 +615,31 @@
         </div>
     </footer>
 
+    <!-- Cart Drawer -->
+    <div class="cart-drawer-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h3>Your Cart (<span class="cart-count-display">0</span>)</h3>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart-message">
+                <img src="assets/imgElements.svg" alt="" width="60" height="60" style="opacity: 0.2; margin-bottom: 20px;">
+                <p>Your cart is empty</p>
+                <button class="cta-button" style="width: auto; padding: 12px 30px; margin-top: 20px;">Shop Now</button>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total flex justify-between">
+                <span class="font-bold">Subtotal</span>
+                <span class="font-bold" id="cartSubtotal">$0.00</span>
+            </div>
+            <p class="text-sm" style="margin: 10px 0 20px; color: var(--gray-500);">Shipping and taxes calculated at checkout</p>
+            <button class="cta-button">Checkout Now</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
     <script>
         // Mobile Menu Logic
         const hamburger = document.querySelector('.hamburger-menu');

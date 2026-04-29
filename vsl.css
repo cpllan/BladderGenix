@@ -335,7 +335,8 @@
 }
 
 .vsl-card {
-    background: #f0f4f4;
+    background: #ecf1f1;
+    border: 1px solid #ecf1f1;
     /* Correct light green background from Figma */
     border-radius: 20px;
     position: relative;
@@ -353,7 +354,6 @@
 }
 
 .vsl-card.featured {
-    background: #ffffff !important;
     /* White background for 6 bottles */
     margin-top: -53px;
     /* To stick out on top */
@@ -938,22 +938,25 @@
         max-width: 100%;
         width: 100%;
         padding-bottom: 60px;
-        background: #f3fafa;
+        background: #ecf1f1;
         border-radius: 24px;
         overflow: hidden;
     }
 
     .vsl-card.featured {
         margin-top: 0;
-        order: 1; /* Best Value first */
+        order: 1;
+        /* Best Value first */
     }
 
     .vsl-card.right-card {
-        order: 2; /* 3-bottle second */
+        order: 2;
+        /* 3-bottle second */
     }
 
     .vsl-card:not(.featured):not(.right-card) {
-        order: 3; /* 1-bottle last */
+        order: 3;
+        /* 1-bottle last */
     }
 
     /* Header for mobile */
